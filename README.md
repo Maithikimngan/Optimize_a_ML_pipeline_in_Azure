@@ -44,3 +44,7 @@ HyperDrive we can try different set of C, max_iter in Random Parameter Sampling,
 
 ## Proof of cluster clean up
 Delete the compute cluster
+![image](https://github.com/user-attachments/assets/9ee36881-9c56-41e1-9bf1-5010c4c6a72d)
+![image](https://github.com/user-attachments/assets/bed8f42e-f7d0-410e-8bd6-40d397789085)
+
+
