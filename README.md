@@ -32,8 +32,11 @@ The benefit of Early Stopping is the model will stop training when accuracy does
 HyperDrive Accuracy
 ![image](https://github.com/user-attachments/assets/a2921493-2b79-4323-aeab-08442cfba1e7)
 
+
 AutoML Accuracy
 ![image](https://github.com/user-attachments/assets/e8078d2c-c4a5-4148-b702-d5e0fcc38a75)
+
+
 
 - The accuracy between AutoML and HyperDrive likely the same. The accuracy for HyperDrive is 90.8%, while for AutoML it is 91.9%.
 - In real business use case the step of feature engineering is very important. And AutoML can create scripts and test with features will be important for model.
@@ -44,7 +47,12 @@ HyperDrive we can try different set of C, max_iter in Random Parameter Sampling,
 
 ## Proof of cluster clean up
 Delete the compute cluster
+
+
 ![image](https://github.com/user-attachments/assets/9ee36881-9c56-41e1-9bf1-5010c4c6a72d)
+
+
+
 ![image](https://github.com/user-attachments/assets/bed8f42e-f7d0-410e-8bd6-40d397789085)
 
 
