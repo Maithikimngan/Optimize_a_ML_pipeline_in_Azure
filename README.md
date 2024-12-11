@@ -13,31 +13,28 @@ The model is then compared with results from Azure AutoML.
 
 
 ## Summary
-- The dataset contains customer information from a bank, like age, default status, and loans.
-- The goal is to predict if a customer will subscribe to a term deposit (TD).
-- The best model used is the Voting Ensembler.
+- The dataset includes  customer information in banking, like age, default status, and loans and etc.
+- The objective is to predict if a customer will subscribe to a term deposit.
+- The best model used is the Voting Ensembler. Because it combines the predictions of multiple models to improve accuracy and robustness
 
 ## Scikit-learn Pipeline
 - Use Logistic Regression from sklearn and HyperDrive to find the best model.
-- Clean the dataset, then split it into 80% for training and 20% for testing.
-- Sampler Benefit: Random Parameter Sampling picks different settings (C and max_iter) to find the best accuracy.
-- Early Stopping Benefit: Bandit stops training if accuracy doesn’t improve, saving time and resources.
+- First, we need to clean the dataset.
+- Second, we split it into 80% for training and 20% for testing Sampler
+- The benefit is Random Parameter Sampling picks different settings (C and max_iter) to find the best accuracy.
+- And the benefit of Early Stopping is Bandit stops training if accuracy doesn’t improve, saving time and resources.
 
 ## AutoML
-AutoML can handle tasks like missing values, feature engineering, and hyperparameter tuning automatically using various models. Key parameters include task type (e.g., classification/regression), training data, target column, evaluation metric, and cross-validation.
-Random Parameter Sampling: Tries different combinations of parameters randomly to find the best accuracy.
-Early Stopping: Stops training when accuracy doesn’t improve, saving time and resources.
+AutoML is a model that can do missing values, feature engineering, and hyperparameter tuning automatically using various models. It can also do task like cross-validation to get the best parameter and can try many types of model to find the best model for the task.
+The benefit of Early Stopping is the model will stop training when accuracy doesn’t improve, saving time and resources.
 
 ## Pipeline comparison
-- I don’t see much difference between AutoML and HyperDrive in this case. The accuracy for HyperDrive is XX, while for AutoML it is XX.
-- The gap is small because the dataset is small, clean, and has variables strongly related to the target. In real-world projects, datasets are more complex, and AutoML might work better if the person using HyperDrive lacks extra dataset knowledge.
-- AutoML is great because it tests many models to find the best one, while HyperDrive here only uses Logistic Regression, which may cause bias.
-- Benefit of early stopping: Bandit early stopping stops training when accuracy doesn’t improve, saving time and resources.
+- The accuracy between AutoML and HyperDrive likely the same. The accuracy for HyperDrive is XX, while for AutoML it is XX.
+- In real business use case the step of feature engineering is very important. And AutoML can create scripts and test with features will be important for model.
+- In this lab, the input feature seems to be very related to output target so that's why feature engineering in this case is not so much important. That's why the two models HyperDrive and AutomML is very close.
 
 ## Future work
-- I want to recreate AutoML for my real-world problem.
-- AutoML feels like a black box to me.
-- I don’t understand how it recognizes data types, handles data, or creates new features.
+HyperDrive we can try different set of C, max_iter in Random Parameter Sampling, and can try to increase the max_total_run and max_concurrent_runs to see if there is any accuracy improvement.
 
 ## Proof of cluster clean up
 Delete the compute cluster
